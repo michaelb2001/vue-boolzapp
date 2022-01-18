@@ -5,27 +5,39 @@
 }
 
 .left,.right{
+    border: 2px solid black;
+    min-height: 80vh;
     float: left;
-
-    height: 70vh;
-
-    border:1px solid black;
 }
-
 .left{
-    width: 20%;
-
-    background-color: white;
+    width: 30%;
 }
-
 .right{
-    width: 80%;
-
-    background-image: url(../img/sfondo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    width: 69%;
 }
+
+.search{
+    position:relative;
+    min-height: 40px;
+}
+
+.bx-search{
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px!important;
+}
+
+.bx{
+    font-size: 30px;
+    color: black;
+}
+
 
 
 
