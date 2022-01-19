@@ -110,12 +110,12 @@ img{
     position: relative;
 }
 
-.ora_data{
+/*.ora_data{
     position: absolute;
     right: 10px;
     bottom:10px;
     margin-top: 5px;
-}
+}*/
 
 .bottom_right{
     position: absolute;
@@ -151,10 +151,10 @@ img{
 }
 
 
-.mio_mex{
+.sent{
     display: flex;
     flex-basis: content;
-    
+
     max-width: 55%;
     background-color: #dbf8c7;
     margin-right: 30px!important;
@@ -165,9 +165,12 @@ img{
 
     position: relative;
 
+    align-self: flex-end;
+
+    padding: 10px!important;
 }
 
-.other_mex{
+.received{
     float: left;
     max-width: 55%;
     background-color: #fff;
@@ -176,6 +179,20 @@ img{
     margin-top: 10px!important;
     padding-bottom: 35px!important;
     border-radius: 15px;
-
+    padding: 10px!important;
     position: relative;
+    align-self: flex-start;
 }
+
+.message p{
+    font-weight: 500;
+}
+
+.chats{
+    cursor: pointer;
+}
+
+.chats .data_ora{
+    cursor: pointer;
+}
+

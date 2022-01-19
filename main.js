@@ -1,6 +1,7 @@
 let vm = new Vue({
     el: "#app",
     data:{
+        dataIndex : 0,
         contacts: [
             {
                 name: 'Michele',
@@ -86,5 +87,30 @@ let vm = new Vue({
                 ],
             },
         ]            
+    },
+
+    methods:{
+        inviaMessaggio : function(){
+            let testo = document.getElementById("input_write").value;
+            this.contacts[this.dataIndex].messages.push({
+                date : "now",
+                text : testo,
+                status : 'sent'
+            }) ;
+            document.getElementById("input_write").value = "";
+            this.timout()
+        },
+
+        timout : function(){
+            setTimeout(this.risposta,1500);
+            
+        },
+        risposta :function(){
+            this.contacts[this.dataIndex].messages.push({
+                date : "now",
+                text : "ok",
+                status : 'received'
+            }) ;
+        }
     }
 });

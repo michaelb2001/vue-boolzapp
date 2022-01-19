@@ -46,12 +46,14 @@
                     </div>
     
                     <div class="chats">
-                            <div v-for="(elemento,indice) in contacts" class="single_chat d-flex justify-content-start align-items-center p-3">
-                                <img src="img/avatar_1.jpg" alt="">
-                                <div class="message ps-2">
-                                    <p>{{elemento.messages.text}}</p>
+                            <div v-for="(elemento,indice) in contacts" @click="dataIndex = indice" class="single_chat d-flex justify-content-between align-items-center p-3">
+                                <img :src=" 'img/avatar' + elemento.avatar + '.jpg'" alt="">
+                                
+                                <div class="message d-flex flex-column flex-grow-1 ps-2">
+                                    <p>{{elemento.name}}</p>
+                                    <span>{{elemento.messages.at(-1).text}}</span>
                                 </div>
-                                <span class="ora_data">ora</span>
+                                <span class="ora_data pe-0 pt-1 align-self-end">{{elemento.messages.at(-1).date}}</span>
                             </div>
                     </div>
                 </div>
@@ -59,7 +61,7 @@
                 <div class="right d-flex flex-column">
                     <div class="top_right d-flex justify-content-between align-items-center px-3">
                         <div class="profilo_utente d-flex justify-content-center align-items-center">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img src="" alt="">
                             <p>nome avatar</p>
                         </div>
 
@@ -70,23 +72,19 @@
                     </div>
 
                     <div class="message d-flex flex-column">
-                        <div class="mio_mex p-2 align-self-end">
-
-                            lorem ipsum
-
-                            <span class="ora_data">ora</span>
-                        </div>
+ 
+ 
                         
-                        <div class="other_mex p-2  align-self-start">
+                        <div v-for="(elemento,indice) in contacts[dataIndex].messages" :class="elemento.status" class="d-flex flex-column">
                             
-                            lorem ipsum
+                            {{elemento.text}}
                             
-                            <span class="ora_data">ora</span>
+                            <span class="ora_data align-self-end ps-3 pe-0 pt-3">{{elemento.date}}</span>
                         </div>
                     </div>
     
                     <div class="bottom_right d-flex justify-content-center align-items-center">
-                        <input type="text" placeholder="Write something" id="input_write" class="rounded-pill px-3">
+                        <input type="text" placeholder="Write something" id="input_write" class="rounded-pill px-3" @keyup.enter="inviaMessaggio()">
                         <i class="fas fa-microphone" ></i>
                     </div>
                 </div>
