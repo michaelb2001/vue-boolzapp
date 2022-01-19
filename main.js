@@ -93,7 +93,7 @@ let vm = new Vue({
         inviaMessaggio : function(){
             let testo = document.getElementById("input_write").value;
             this.contacts[this.dataIndex].messages.push({
-                date : "now",
+                date : `${dayjs().date()}/${dayjs().month()+1}/${dayjs().year()} ${dayjs().hour()}:${dayjs().minute()}:${dayjs().second()}`,
                 text : testo,
                 status : 'sent'
             }) ;
@@ -107,7 +107,7 @@ let vm = new Vue({
         },
         risposta :function(){
             this.contacts[this.dataIndex].messages.push({
-                date : "now",
+                date : `${dayjs().date()}/${dayjs().month()+1}/${dayjs().year()} ${dayjs().hour()}:${dayjs().minute()}:${dayjs().second()}`,
                 text : "ok",
                 status : 'received'
             }) ;
