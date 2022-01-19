@@ -22,13 +22,13 @@ let vm = new Vue({
                     text: 'Tutto fatto!',
                     status: 'received'
                     }
-                    ],
-                    },
-                    {
-                    name: 'Fabio',
-                    avatar: '_2',
-                    visible: true,
-                    messages: [
+                ],
+            },
+            {
+                name: 'Fabio',
+                avatar: '_2',
+                visible: true,
+                messages: [
                     {
                     date: '20/03/2020 16:30:00',
                     text: 'Ciao come stai?',
@@ -44,13 +44,13 @@ let vm = new Vue({
                     text: 'Mi piacerebbe ma devo andare a fare la spesa.',
                     status: 'sent'
                     }
-                    ],
-                    },
-                    {
-                    name: 'Samuele',
-                    avatar: '_3',
-                    visible: true,
-                    messages: [
+                ],
+            },
+            {
+                name: 'Samuele',
+                avatar: '_3',
+                visible: true,
+                messages: [
                     {
                     date: '28/03/2020 10:10:40',
                     text: 'La Marianna va in campagna',
@@ -67,12 +67,12 @@ let vm = new Vue({
                     status: 'received'
                     }
                     ],
-                    },
-                    {
-                    name: 'Luisa',
-                    avatar: '_4',
-                    visible: true,
-                    messages: [
+            },
+            {
+                name: 'Luisa',
+                avatar: '_4',
+                visible: true,
+                messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     text: 'Lo sai che ha aperto una nuova pizzeria?',

@@ -1,43 +1,181 @@
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0%!important;
+    margin: 0%!important;
     box-sizing: border-box;
 }
 
-.left,.right{
-    border: 2px solid black;
-    min-height: 80vh;
-    float: left;
+
+.main-container{
+    width: 75%;
+    height: 90%;
 }
+
+.background{
+    height: 100vh;
+}
+
+.main-container{
+    width: 75%;
+    height: 90%;
+    background-color: white;
+}
+
 .left{
     width: 30%;
+    height: 100%;
+    border: 1px solid black;
 }
+
 .right{
-    width: 69%;
+    width: 70%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.my_profile{
+    background-color:#ededed;
+    height: 50px;
+}
+
+.my_profile .icone_my_profile{
+    font-size: 24px;
+}
+
+.notifiche{
+    background-color: #085373;
+    height: 60px;
 }
 
 .search{
-    position:relative;
-    min-height: 40px;
+    background-color:#ededed;
+    height: 60px;
+    position: relative;
 }
 
-.bx-search{
-    position: absolute;
-    right: 10px;
-    top: 0;
+.chats{
+    background-color: white;
+    height: 100%;
 }
 
 img{
-    height: 40px;
-    width: 40px;
-    border-radius: 50px!important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-.bx{
-    font-size: 30px;
-    color: black;
+.right{
+    position: relative;
+    
+}
+
+.right{
+    background-image: url(img/sfondo.jpg);
+    background-color: #9c9999;
+    height: 100%;
+}
+
+/*.right::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0%;
+    left:0%;
+    width: 100%;
+    height: 100%;
+
+    background-image: url(img/sfondo.png);
+    opacity: 0.8;
+
+}*/
+
+
+
+.fa-bell-slash{
+    color: white;
+    background-color: #1d7da7;
+    border-radius: 50%;
+}
+
+#input_search{
+    width: 90%;
+    height: 30px;
+}
+
+.search .fa-search{
+    position: absolute;
+    right: 30px;
+}
+
+.single_chat{
+    position: relative;
+}
+
+.ora_data{
+    position: absolute;
+    right: 10px;
+    bottom:10px;
+    margin-top: 5px;
+}
+
+.bottom_right{
+    position: absolute;
+
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+
+    background-color: #f0f0f0;
+
+    z-index:2;
+}
+
+#input_write{
+    height: 30px;
+    width: 90%;
+}
+
+.fa-microphone{
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 2px;
+}
+
+.top_right{
+    height: 50px;
+
+    background-color: #f0f0f0;
+
+    z-index:2;
+    font-size: 24px;
 }
 
 
+.mio_mex{
+    display: flex;
+    flex-basis: content;
+    
+    max-width: 55%;
+    background-color: #dbf8c7;
+    margin-right: 30px!important;
+    margin-left: 30px!important;
+    margin-top: 10px!important;
+    padding-bottom: 35px!important;
+    border-radius: 15px;
 
+    position: relative;
 
+}
+
+.other_mex{
+    float: left;
+    max-width: 55%;
+    background-color: #fff;
+    margin-left: 30px!important;
+    margin-right: 30px!important;
+    margin-top: 10px!important;
+    padding-bottom: 35px!important;
+    border-radius: 15px;
+
+    position: relative;
+}
