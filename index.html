@@ -78,7 +78,7 @@
                         <div v-for="(elemento,indice) in contacts[dataIndex].messages" :class="elemento.status" class="d-flex flex-column">
                             <div class="d-flex align-items-center g-2">
                                 <p class="messaggio">{{elemento.text}}</p>
-                                <i class="fas fa-chevron-down ps-5" @onclick="elemento.isHidden = !elemento.isHidden"></i>
+                                <i class="fas fa-chevron-down ps-5" @onclick="mostraDiv(indice,dataIndex)"></i>
 
                                 <div v-if="!elemento.isHidden" class="scelta d-flex flex-column align-items-center justify-content-center">
                                     <div @click="elemento.splice(indice,1)">elimina messagio</div>

@@ -145,6 +145,13 @@ let vm = new Vue({
         },
         elinimaMessaggio :function(indice){
             this.contacts[indice].messages.splice(indice,3);
+        },
+
+        mostraDiv : function(index,dataIndex){
+            this.contacts[dataIndex].messages[index].isHidden = !this.contacts[dataIndex].messages[index].isHidden;
+            console.log(this.contacts[dataIndex].messages[index].isHidden );
         }
+
+
     }
 });
