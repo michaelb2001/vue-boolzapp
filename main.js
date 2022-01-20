@@ -102,7 +102,7 @@ let vm = new Vue({
         },
 
         timout : function(){
-            setTimeout(this.risposta,1500);
+            setTimeout(this.risposta,3500);
             
         },
         risposta :function(){

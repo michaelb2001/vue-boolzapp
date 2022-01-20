@@ -110,16 +110,9 @@ img{
     position: relative;
 }
 
-/*.ora_data{
-    position: absolute;
-    right: 10px;
-    bottom:10px;
-    margin-top: 5px;
-}*/
 
 .bottom_right{
     position: absolute;
-
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -196,3 +189,11 @@ img{
     cursor: pointer;
 }
 
+.message{
+    overflow-y: scroll;
+    margin-bottom: 60px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
