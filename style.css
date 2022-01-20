@@ -205,9 +205,13 @@ img{
 }
 
 .scelta{
-    display: none!important;
+    display: none;
 }
 
 .messaggio{
     flex-grow: 1;
+}
+
+.comparsa{
+    display: flex!important;
 }

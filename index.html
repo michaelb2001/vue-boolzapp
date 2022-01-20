@@ -50,10 +50,10 @@
                                 <img :src=" 'img/avatar' + elemento.avatar + '.jpg'" alt="">
                                 
                                 <div class="message d-flex flex-column flex-grow-1 ps-2">
-                                    <p>{{elemento.name}}</p>
-                                    <span>{{elemento.messages.at(-1).text}}</span>
+                                    <p>{{elemento.name}} {{elemento.messages.lenght}}</p>
+                                    <span v-if="elemento.messages.length>0">{{elemento.messages.at(-1).text}}</span>
                                 </div>
-                                <span class="ora_data pe-0 pt-1 align-self-end">{{elemento.messages.at(-1).date}}</span>
+                                <span v-if="elemento.messages.length>0" class="ora_data pe-0 pt-1 align-self-end">{{elemento.messages.at(-1).date}}</span>
                             </div>
                     </div>
                 </div>
@@ -78,10 +78,10 @@
                         <div v-for="(elemento,indice) in contacts[dataIndex].messages" :class="elemento.status" class="d-flex flex-column">
                             <div class="d-flex align-items-center g-2">
                                 <p class="messaggio">{{elemento.text}}</p>
-                                <i class="fas fa-chevron-down ps-5" @onclick="mostraDiv(indice,dataIndex)"></i>
+                                <i class="fas fa-chevron-down ps-5" @mouseleave="mostraDiv(null)" @mouseenter="mostraDiv(indice)"></i>
 
-                                <div v-if="!elemento.isHidden" class="scelta d-flex flex-column align-items-center justify-content-center">
-                                    <div @click="elemento.splice(indice,1)">elimina messagio</div>
+                                <div class="scelta" :class="{comparsa : mexMenuCliccato == indice}">
+                                    <div @click="contacts[dataIndex].messages.splice(indice,1)">elimina messagio</div>
                                 </div>
                             </div>
 

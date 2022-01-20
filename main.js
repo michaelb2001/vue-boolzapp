@@ -1,6 +1,7 @@
 let vm = new Vue({
     el: "#app",
     data:{
+        mexMenuCliccato : null,
         dataIndex : 0,
         search : "",
         contacts: [
@@ -147,9 +148,9 @@ let vm = new Vue({
             this.contacts[indice].messages.splice(indice,3);
         },
 
-        mostraDiv : function(index,dataIndex){
-            this.contacts[dataIndex].messages[index].isHidden = !this.contacts[dataIndex].messages[index].isHidden;
-            console.log(this.contacts[dataIndex].messages[index].isHidden );
+        mostraDiv : function(index){
+            this.mexMenuCliccato = index;
+            console.log("sei dentro la funzione",index);
         }
 
 
