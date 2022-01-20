@@ -180,7 +180,9 @@ img{
 .message p{
     font-weight: 500;
 }
-
+.message span{
+    text-overflow: ellipsis;
+}
 .chats{
     cursor: pointer;
 }
@@ -196,4 +198,16 @@ img{
 
 ::-webkit-scrollbar{
     display: none;
+}
+
+.display_none{
+    display: none!important;
+}
+
+.scelta{
+    display: none!important;
+}
+
+.messaggio{
+    flex-grow: 1;
 }
