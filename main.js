@@ -1,6 +1,7 @@
 let vm = new Vue({
     el: "#app",
     data:{
+        chatRisposta : "",
         mexMenuCliccato : null,
         dataIndex : 0,
         search : "",
@@ -111,6 +112,7 @@ let vm = new Vue({
                 status : 'sent'
             }) ;
             document.getElementById("input_write").value = "";
+            chatRisposta = this.contacts[this.dataIndex].messages
             this.timout()
         },
 
@@ -119,7 +121,7 @@ let vm = new Vue({
             
         },
         risposta :function(){
-            this.contacts[this.dataIndex].messages.push({
+            chatRisposta.push({
                 date : `${dayjs().date()}/${dayjs().month()+1}/${dayjs().year()} ${dayjs().hour()}:${dayjs().minute()}:${dayjs().second()}`,
                 text : "ok",
                 status : 'received'
@@ -129,16 +131,16 @@ let vm = new Vue({
         filtra : function(){
             this.contacts.forEach(element => {
                 console.log("sei dentro la funzione");
-                if(!element.name.toLowerCase().includes(this.search)){
+                if(!element.name.toLowerCase().includes(this.search.toLowerCase())){
                     console.log("ciao")
                     element.visible = true;
                 }else{
-                    console.log("dioporco");
+                    console.log("ciao ciao");
                     element.visible = false;
                 }
             });
         },
-        sceltaMessaggio :function(indice){
+        /*sceltaMessaggio :function(indice){
             let scelte = document.querySelectorAll(".scelta");
             scelte.forEach(element =>{
                 element.style.display ="flex!important";
@@ -146,7 +148,7 @@ let vm = new Vue({
         },
         elinimaMessaggio :function(indice){
             this.contacts[indice].messages.splice(indice,3);
-        },
+        },*/
 
         mostraDiv : function(index){
             this.mexMenuCliccato = index;
@@ -154,5 +156,13 @@ let vm = new Vue({
         }
 
 
+
+    },
+
+    updated: function (){
+        let box = document.querySelector(".chatCorrente");
+        box.scrollTop = box.scrollHeight;
+        console.log(box.scrollHeight);
     }
+    
 });
